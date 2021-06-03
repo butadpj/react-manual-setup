@@ -53,8 +53,10 @@ npm install
 
    <br>
 
-7. Install **loaders**, 'cause we need them to load **styles** (.css), and **files** (.babelrc, .jpeg, .png, .svg, etc.)  
-   `npm install style-loader css-loader file-loader babel-loader`
+7. Install **loaders**, 'cause we need them to load **styles** (.css), and **files** (.babelrc, .jpeg, .png, .svg, etc.)
+   ```
+   npm install style-loader css-loader file-loader babel-loader
+   ```
    <br>
 
 - _**After the installation...**_
@@ -71,6 +73,7 @@ Your project's file structure should look like this if you didn't change any nam
 <br><br>
 
 9. Let's create the html template for our App.
+
    Create a new file called "**index.html**" inside of the "**public**" folder. Then copy and paste the code below
 
    ```
