@@ -204,7 +204,9 @@ module.exports = merge(common, {
 });
 ```
 
-14. Let's not forget the babel config! Create a new "**.babelrc**" file, at the project's root again. Then, copy and paste this code
+14. Let's not forget the babel config!
+
+    Create a new "**.babelrc**" file, at the project's root again. Then, copy and paste this code
 
 ```
 {
