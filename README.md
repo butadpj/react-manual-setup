@@ -4,7 +4,11 @@
 
 ---
 
-##### _You can just clone this project and start writing your React Application_
+##### _You can just clone this project and start writing your React Application after installing the dependencies with_
+
+```
+npm install
+```
 
 ##### _But if you want to learn how to set things up manually by yourself, below are the steps._
 
