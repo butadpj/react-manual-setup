@@ -4,21 +4,27 @@
 
 ---
 
-##### _You can just clone this project and start writing your React Application after installing the dependencies with_
+#### _You can just clone this project and start writing your React Application after installing the dependencies with_
 
 ```
 npm install
 ```
 
-##### _But if you want to learn how to set things up manually by yourself, below are the steps._
+#### _But if you want to learn how to set things up manually by yourself, below are the steps._
 
-#### Steps:
+### Steps:
 
 1. Open up your terminal and cd into your project's directory
 
 2. Initialize npm and git
-   `npm init -y`
-   `git init`
+
+   ```
+   npm init -y
+   ```
+
+   ```
+   git init
+   ```
 
 3. Create a "**.gitignore**" file and ignore the files below:
 
@@ -30,13 +36,21 @@ npm install
 - **_Installing necessary packages_**
 
 4. Install **React** and **React DOM**
-   `npm install react react-dom`
+   ```
+   npm install react react-dom
+   ```
    <br>
 5. Install **module bundler** & **plugins** (Webpack)
-   `npm install webpack webpack-cli webpack-dev-server webpack-merge html-webpack-plugin`
+   ```
+   npm install webpack webpack-cli webpack-dev-server webpack-merge html-webpack-plugin
+   ```
    <br>
 6. Install **transpiler/compiler** (Babel)
-   `npm install @babel/core @babel/cli @babel/preset-env @babel/preset-react`
+
+   ```
+   npm install @babel/core @babel/cli @babel/preset-env @babel/preset-react
+   ```
+
    <br>
 
 7. Install **loaders**, 'cause we need them to load **styles** (.css), and **files** (.babelrc, .jpeg, .png, .svg, etc.)  
