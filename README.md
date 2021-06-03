@@ -106,6 +106,7 @@ Your project's file structure should look like this if you didn't change any nam
    ```
 
 10. After creating the html template, you can now write your React (.js) files inside of the "**src**" folder.
+
     Let's create a new **index.js** file inside **src** folder. Then add the code below.
     Here, we're just rendering a simple \<h2> tag with text
 
