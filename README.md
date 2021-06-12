@@ -131,22 +131,19 @@ Create a new file called "**index.html**" inside of the "**public**" folder. The
 
 <br>
 
-#### 10. After creating the html template, you can now write your React (.js) files inside of the "**src**" folder.
+#### 10. After creating the html template, you can now write your React (.js) files inside of the "**src**" folder. <br> Let's create a new **index.js** file inside **src** folder. Then add the code below to render a simple \<h2> text <br>
 
-    Let's create a new **index.js** file inside **src** folder. Then add the code below.
-    Here, we're just rendering a simple \<h2> tag with text
+```
+  import React from "react";
+  import ReactDOM from "react-dom";
 
-    ```
-     import React from "react";
-     import ReactDOM from "react-dom";
-
-     ReactDOM.render(
-       <h2 style={{ textAlign: "center", marginTop: "2em" }}>
-         A React App built from scratch
-       </h2>,
-       document.getElementById("root")
-     );
-    ```
+  ReactDOM.render(
+    <h2 style={{ textAlign: "center", marginTop: "2em" }}>
+      A React App built from scratch
+    </h2>,
+    document.getElementById("root")
+  );
+```
 
 ### _Now, we only need some configuration before we can actually run our React App_
 
