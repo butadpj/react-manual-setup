@@ -44,11 +44,15 @@ npm install react react-dom
 ```
 
 <br>
+
 #### 5. Install **module bundler** & **plugins** (Webpack)
+
 ```
 npm install webpack webpack-cli webpack-dev-server webpack-merge html-webpack-plugin
 ```
+
 <br>
+
 #### 6. Install **transpiler/compiler** (Babel)
 
 ```
