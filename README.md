@@ -254,8 +254,8 @@ module.exports = merge(common, {
 
 #### 15. Add the needed scripts to start your React App in your "**package.json**" file.
 
-    - "**start**" - to start our React app development server
-    - "**build**" - to generate optimized static files needed for production
+- "**start**" - to start our React app development server
+- "**build**" - to generate optimized static files needed for production
 
 ```
 "start": "webpack serve --open --config webpack.dev.js",
