@@ -4,67 +4,87 @@
 
 ---
 
-#### _You can just clone this project and start writing your React Application after installing the dependencies with_
+### _You can just clone this project and start writing your React Application after installing the dependencies with_
 
 ```
 npm install
 ```
 
-#### _But if you want to learn how to set things up manually by yourself, below are the steps._
+### _But if you want to learn how to set things up manually by yourself, below are the steps._
 
 ### Steps:
 
-1. Open up your terminal and cd into your project's directory
+#### 1. Open up your terminal and cd into your project's directory
 
-2. Initialize npm and git
+#### 2. Initialize npm and git
 
-   ```
-   npm init -y
-   ```
+```
+npm init -y
+```
 
-   ```
-   git init
-   ```
+```
+git init
+```
 
-3. Create a "**.gitignore**" file and ignore the files below:
+#### 3. Create a "**.gitignore**" file and ignore the files below:
 
-   ```
-   node_modules/
-   build/
-   ```
+```
+node_modules/
+build/
+```
 
-- **_Installing necessary packages_**
+---
 
-4. Install **React** and **React DOM**
-   ```
-   npm install react react-dom
-   ```
-   <br>
-5. Install **module bundler** & **plugins** (Webpack)
-   ```
-   npm install webpack webpack-cli webpack-dev-server webpack-merge html-webpack-plugin
-   ```
-   <br>
-6. Install **transpiler/compiler** (Babel)
+### **_Installing necessary packages_**
 
-   ```
-   npm install @babel/core @babel/cli @babel/preset-env @babel/preset-react
-   ```
+#### 4. Install **React** and **React DOM**
 
-   <br>
+```
+npm install react react-dom
+```
 
-7. Install **loaders**, 'cause we need them to load **styles** (.css), and **files** (.babelrc, .jpeg, .png, .svg, etc.)
-   ```
-   npm install style-loader css-loader file-loader babel-loader
-   ```
-   <br>
+<br>
+#### 5. Install **module bundler** & **plugins** (Webpack)
+```
+npm install webpack webpack-cli webpack-dev-server webpack-merge html-webpack-plugin
+```
+<br>
+#### 6. Install **transpiler/compiler** (Babel)
 
-- _**After the installation...**_
+```
+npm install @babel/core @babel/cli @babel/preset-env @babel/preset-react
+```
 
-8. Create two new folders at the root of the project, name it "**src**" & "**public**" .
+<br>
 
-   - The **src** folder will be the **entry point** of our React app.
-   - The **public** folder is where we are serving our app from.
+#### 7. Install **loaders**, 'cause we need them to load **styles** (.css), and **files** (.babelrc, .jpeg, .png, .svg, etc.)
+
+```
+npm install style-loader css-loader file-loader babel-loader
+```
+
+<br>
+
+#### React testing with **Jest** **(Optional)**
+
+##### 1. Add the following packages for testing with jest
+
+```
+npm install jest babel-jest react-test-renderer
+```
+
+##### 2. Change the test script in your package.json file to
+
+   <img src="readme-images/test-script.png">
+
+---
+
+### _**After the installation...**_
+
+#### 8. Create two new folders at the root of the project, name it "**src**" & "**public**" .
+
+- The **src** folder will be the **entry point** of our React app.
+- The **public** folder is where we are serving our app from.
 
 Your project's file structure should look like this if you didn't change any names
 
@@ -72,40 +92,42 @@ Your project's file structure should look like this if you didn't change any nam
 
 <br><br>
 
-9. Let's create the html template for our App.
+#### 9. Let's create the html template for our App.
 
-   Create a new file called "**index.html**" inside of the "**public**" folder. Then copy and paste the code below
+Create a new file called "**index.html**" inside of the "**public**" folder. Then copy and paste the code below
 
-   ```
-   <!DOCTYPE html>
-   <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="React App from scratch" />
+```
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <meta name="description" content="React App from scratch" />
 
-        <title>React Manual Setup</title>
-    </head>
+     <title>React Manual Setup</title>
+ </head>
 
-    <body>
-        <noscript>You need to enable JavaScript to run this app.</noscript>
-        <div id="root"></div>
-        <!--
-          This HTML file is a template.
-          If you open it directly in the browser, you will see an empty page.
+ <body>
+     <noscript>You need to enable JavaScript to run this app.</noscript>
+     <div id="root"></div>
+     <!--
+       This HTML file is a template.
+       If you open it directly in the browser, you will see an empty page.
 
-          You can add webfonts, meta tags, or analytics to this file.
-          The build step will place the bundled scripts into the <body> tag.
+       You can add webfonts, meta tags, or analytics to this file.
+       The build step will place the bundled scripts into the <body> tag.
 
-          To begin the development, run `npm start` or `yarn start`.
-          To create a production bundle, use `npm run build` or `yarn build`.
-        -->
-    </body>
+       To begin the development, run `npm start` or `yarn start`.
+       To create a production bundle, use `npm run build` or `yarn build`.
+     -->
+ </body>
 
-    </html>
-   ```
+ </html>
+```
 
-10. After creating the html template, you can now write your React (.js) files inside of the "**src**" folder.
+<br>
+
+#### 10. After creating the html template, you can now write your React (.js) files inside of the "**src**" folder.
 
     Let's create a new **index.js** file inside **src** folder. Then add the code below.
     Here, we're just rendering a simple \<h2> tag with text
@@ -122,9 +144,9 @@ Your project's file structure should look like this if you didn't change any nam
      );
     ```
 
-Now, we only need some configuration before we can actually run our React App
+### _Now, we only need some configuration before we can actually run our React App_
 
-11. Create a file called "**webpack.common.js**" at the root of your project. Then, copy and paste the code below. This will be our shared configuration between development and production
+#### 11. Create a file called "**webpack.common.js**" at the root of your project. Then, copy and paste the code below.<br>This is will be the shared configuration between development and production config.
 
 ```
 const path = require("path");
@@ -173,7 +195,9 @@ module.exports = {
 };
 ```
 
-12. Repeat the previous step for "**webpack.dev.js**". This will be our development configuration.
+<br>
+
+#### 12. Repeat the previous step for "**webpack.dev.js**". This will be our development configuration.
 
 ```
 const { merge } = require("webpack-merge");
@@ -194,7 +218,9 @@ module.exports = merge(common, {
 });
 ```
 
-13. Lastly, do the same thing again for "**webpack.prod.js**". This will be our production configuration.
+<br>
+
+#### 13. Lastly, do the same thing again for "**webpack.prod.js**". This will be our production configuration.
 
 ```const { merge } = require("webpack-merge");
 const common = require("./webpack.common.js");
@@ -204,7 +230,9 @@ module.exports = merge(common, {
 });
 ```
 
-14. Let's not forget the babel config!
+<br>
+
+#### 14. Let's not forget the babel config!
 
     Create a new "**.babelrc**" file, at the project's root again. Then, copy and paste this code
 
@@ -217,14 +245,15 @@ module.exports = merge(common, {
 }
 ```
 
-So far, this is what our file structure looks like. Just ignore the "**readme-images**" folder and "README.md".
+### _So far, this is what our file structure looks like. Just ignore the "**readme-images**" folder and "README.md"._
 
 <img src="readme-images/structure2.png">
 
-_Hang on... We are getting close to the end_
-<br> <br>
+### _Hang on... We are getting close to the end_
 
-15. Add the needed scripts to start your React App in your "**package.json**" file.
+<br>
+
+#### 15. Add the needed scripts to start your React App in your "**package.json**" file.
 
     - "**start**" - to start our React app development server
     - "**build**" - to generate optimized static files needed for production
@@ -238,7 +267,7 @@ _Hang on... We are getting close to the end_
 
 <br> <br>
 
-16. You can now run your React App pretty much the same as how you run your create-react-app (CRA)
+#### 16. You can now run your React App pretty much the same as how you run your create-react-app (CRA)
 
 ```
 npm start
