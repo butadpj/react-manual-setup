@@ -134,15 +134,15 @@ Create a new file called "**index.html**" inside of the "**public**" folder. The
 #### 10. After creating the html template, you can now write your React (.js) files inside of the "**src**" folder. <br> Let's create a new **index.js** file inside **src** folder. Then add the code below to render a simple \<h2> text <br>
 
 ```
-  import React from "react";
-  import ReactDOM from "react-dom";
+import React from "react";
+import ReactDOM from "react-dom";
 
-  ReactDOM.render(
-    <h2 style={{ textAlign: "center", marginTop: "2em" }}>
-      A React App built from scratch
-    </h2>,
-    document.getElementById("root")
-  );
+ReactDOM.render(
+  <h2 style={{ textAlign: "center", marginTop: "2em" }}>
+    A React App built from scratch
+  </h2>,
+  document.getElementById("root")
+);
 ```
 
 ### _Now, we only need some configuration before we can actually run our React App_
@@ -233,9 +233,7 @@ module.exports = merge(common, {
 
 <br>
 
-#### 14. Let's not forget the babel config!
-
-    Create a new "**.babelrc**" file, at the project's root again. Then, copy and paste this code
+#### 14. Let's not forget the babel config! <br>Create a new "**.babelrc**" file, at the project's root again. Then, copy and paste the code below.
 
 ```
 {
